@@ -34,6 +34,7 @@ const resolvers = {
   Subscription: {
     roleChanged: {
       subscribe: () => {
+        console.log('roleChanged subscribe!');
         return pubsub.asyncIterator('ROLE_CHANGED');
       },
     },
