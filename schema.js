@@ -13,7 +13,7 @@ type Query {
   role(id: ID!): Role
 }
 type Subscription {
-  roleChanged: Role!
+  roleChanged: Role
 }
 type Mutation {
   change(id: ID!, name: String!): Role
