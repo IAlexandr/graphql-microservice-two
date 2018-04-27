@@ -1,4 +1,6 @@
 import { RedisPubSub } from 'graphql-redis-subscriptions';
+import debug from './debug';
+const log = debug('pubsub');
 
 const options = {
   port: 32768,
