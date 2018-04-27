@@ -1,5 +1,5 @@
-import { pubsub } from './pubsub';
-const { makeExecutableSchema } = require('graphql-tools');
+import pubsub from './pubsub';
+import { makeExecutableSchema } from 'graphql-tools';
 const data = [
   { id: '1', name: 'superadmin' },
   { id: '2', name: 'admin' },
@@ -54,7 +54,7 @@ const resolvers = {
 };
 
 // (EXECUTABLE) SCHEMA
-module.exports = makeExecutableSchema({
+export default makeExecutableSchema({
   typeDefs,
   resolvers,
 });
